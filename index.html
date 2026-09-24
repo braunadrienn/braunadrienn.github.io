@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitális Kultúra Érettségi Feladatgyűjtemény</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f5;
+            color: #3e3e3e;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #a8c3a5;
+            color: #2f3d2f;
+            padding: 1rem;
+            text-align: center;
+        }
+	a {
+    	    color: #567a55;
+	}
+	a:hover {
+    	    color: #3c523c;
+	}
+        nav {
+            background-color: #d2c2b0;
+            padding: 1rem;
+        }
+        nav a {
+            color: #2f3d2f;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: bold;
+        }
+	.fejlec-rogzito {
+	    position: sticky; /* Ettől válik "ragadóssá" */
+	    top: 0;           /* A képernyő legtetejéhez ragad */
+	    z-index: 1000;    /* Ez nagyon fontos: biztosítja, hogy a fejléc a tartalom FÖLÖTT maradjon, ne takarja ki semmi 				görgetéskor */
+	    width: 100%;      /* Biztos ami biztos, legyen teljes szélességű */
+}
+        .container {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: flex-start; /* Ez segít, hogy ne nyúljon meg a másik doboz, ha az egyiket kinyitom */
+        }
+        .section {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+        }
+        .section h2 {
+            color: #567a55;
+            border-bottom: 2px solid #a8c3a5; /* Kis díszítés az alcím alá */
+            padding-bottom: 10px;
+        }
+        
+        /* --- ÚJ STÍLUSOK A LENYÍLÓ MENÜHÖZ --- */
+        
+        /* Eltüntetjük az alap pöttyöket a fő listáról */
+        ul.main-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* A lenyíló doboz stílusa */
+        details {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #fdfdfd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        details:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* A kattintható címsor (summary) */
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #2f3d2f;
+            list-style: none; /* Ez eltünteti a nyilat egyes böngészőkben, de pótoljuk */
+            position: relative;
+            padding-left: 25px; /* Hely a saját nyílnak */
+        }
+
+        /* Saját nyíl készítése (opcionális, de szebb) */
+        summary::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: #567a55;
+            font-size: 0.8em;
+            top: 3px;
+            transition: transform 0.2s;
+        }
+
+        /* Ha nyitva van, forduljon el a nyíl */
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        /* A belső lista stílusa */
+        details ul {
+            list-style-type: square; /* A belső elemeknek maradjon a négyzete */
+            margin-top: 10px;
+            padding-left: 20px;
+            background-color: #fff;
+            border-left: 3px solid #a8c3a5; /* Egy kis vonal bal oldalon */
+            padding: 10px 10px 10px 25px;
+        }
+        
+        details ul li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #a8c3a5;
+            margin-top: 20px;
+        }
+        
+        /* Reszponzivitás mobilra */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div class="fejlec-rogzito">    
+		<header>
+	        <h1>Digitális Kultúra Érettségi Feladatgyűjtemény</h1>
+		    </header>
+	    <nav>
+	        <a href="#kozep">Középszintű érettségi</a>
+        	<a href="#emelt">Emelt szintű érettségi</a>
+	    </nav>
+	</div>
+    <div class="container">
+        <div class="section" id="kozep">
+            <h2>Középszintű érettségi</h2>
+            <ul class="main-list">
+                <li>
+                    <details>
+                        <summary>Szövegszerkesztés</summary>
+                        <ul>
+                            <li><a href="feladatok/lego.zip" download>Lego</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Számítógépes grafika és képszerkesztés</summary>
+                        <ul>
+                            <li><a href="feladatok/digitalismuhely.zip" download>Digitális műhely</a></li>
+			    <li><a href="feladatok/lumina.zip" download>Lumina</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Bemutatókészítés</summary>
+                        <ul>
+                            <li><a href="feladatok/cyberbullying.zip" download>Kiberbántalmazás</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Táblázatkezelés</summary>
+                        <ul>
+                            <li><a href="feladatok/festek.zip" download>Festék</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Adatbázis-kezelés</summary>
+                        <ul>
+                            <li><a href="feladatok/szamitogep.zip" download>Számítógép</a></li>
+                            <li><a href="feladatok/gyujtoakcio.zip" download>Gyűjtőakció</a></li>
+                            <li><a href="feladatok/sportnap.zip" download>Sportnap</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Algoritmizálás, adatmodellezés</summary>
+                        <ul>
+                            <li><a href="feladatok/celbadobas.zip" download>Célbadobás</a></li>
+                            <li><a href="feladatok/visszavaltas.zip" download>Visszaváltás</a></li>
+                            <li><a href="feladatok/kerekpartarolo.zip" download>Kerékpártároló</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section" id="emelt">
+            <h2>Emelt szintű érettségi</h2>
+            <ul class="main-list">
+                <li>
+                    <details>
+                        <summary>Szövegszerkesztés</summary>
+                        <ul>
+                            <li><a href="feladatok/tantrix.zip" download>Tantrix</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Számítógépes grafika</summary>
+                        <ul>
+                            <li>Vektorgrafika alapjai</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Bemutatókészítés</summary>
+                        <ul>
+                            <li><a href="feladatok/pixelvilag.zip" download>Pixelvilág</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Publikálás a világhálón</summary>
+                        <ul>
+                            <li><a href="feladatok/szelektiv.zip" download>Szelektív hulladékgyűjtés</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Táblázatkezelés</summary>
+                        <ul>
+                            <li><a href="feladatok/futoverseny.zip" download>Futóverseny</a></li>
+			    <li><a href="feladatok/pixelvilag.zip" download>Pixelvilág</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Adatbázis-kezelés</summary>
+                        <ul>
+                            <li><a href="feladatok/vegyszer.zip" download>Vegyszer</a></li>
+			    <li><a href="feladatok/erdeszet.zip" download>Erdészet</a></li>
+                            <li><a href="feladatok/focivb.zip" download>Futball világbajnokság</a></li>
+
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Programozás</summary>
+                        <ul>
+                            <li><a href="feladatok/projektfeladatok.zip" download>Projektfeladatok</a></li>
+                            <li><a href="feladatok/erettsegi.zip" download>Érettségi</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+	<footer>
+        <p>&copy; 2025 Digitális Érettségi | Készítette: Braun Adrienn</p>
+    </footer>
+</body>
+</html>
